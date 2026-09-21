@@ -29,9 +29,9 @@ from typing import Optional
 
 from mcp.server.fastmcp import FastMCP
 
-from . import config, db, security
-from .calendar_client import create_interview_event
-from .gmail_client import search_messages
+from job_search_mcp import config, db, security
+from job_search_mcp.calendar_client import create_interview_event
+from job_search_mcp.gmail_client import search_messages
 
 mcp = FastMCP("job-search-mcp")
 
