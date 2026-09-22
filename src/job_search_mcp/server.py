@@ -40,6 +40,17 @@ _SRC_DIR = str(Path(__file__).resolve().parent.parent)
 if _SRC_DIR not in sys.path:
     sys.path.insert(0, _SRC_DIR)
 
+# The MCP protocol runs over stdio: every response is a line written to
+# stdout, read by the client on the other end of a pipe. Python fully
+# buffers stdout by default when it isn't attached to a real terminal
+# (which is always true here -- Claude Desktop, `mcp dev`, and the
+# Inspector all launch this as a subprocess over a pipe), so without this,
+# responses can sit in the buffer instead of reaching the client until
+# something else happens to flush it. Forcing line buffering here makes
+# every response go out immediately, regardless of how this file is launched.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(line_buffering=True)
+
 from mcp.server.fastmcp import FastMCP
 
 from job_search_mcp import config, db, security
