@@ -10,6 +10,8 @@ spots an interview time.
 Built for Cornell ENMGT (MCP Assignment). Domain: **Personal Productivity**
 (task tracking + email summarization).
 
+> **AI disclaimer:** The idea for this project was conceived by the author (SJAlanA). The implementation was coded with the assistance of Claude Sonnet.
+
 ## What it exposes
 
 | Type     | Name                  | Purpose                                                             |
