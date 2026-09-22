@@ -1,14 +1,14 @@
 {
   "mcpServers": {
     "job-search-mcp": {
-      "command": "<ABSOLUTE_PATH_TO_PROJECT>/.venv/bin/python",
+      "command": "/Users/sahaijordialana/Documents/Engineering\ Management/AI/MCP\ Assignment\ 4/job-search-mcp/.venv/bin/python",
       "args": [
         "-m",
         "job_search_mcp.server"
       ],
-      "cwd": "<ABSOLUTE_PATH_TO_PROJECT>",
+      "cwd": "/Users/sahaijordialana/Documents/Engineering\ Management/AI/MCP\ Assignment\ 4/job-search-mcp",
       "env": {
-        "PYTHONPATH": "<ABSOLUTE_PATH_TO_PROJECT>/src"
+        "PYTHONPATH": "/Users/sahaijordialana/Documents/Engineering\ Management/AI/MCP\ Assignment\ 4/job-search-mcp/src"
       }
     }
   }

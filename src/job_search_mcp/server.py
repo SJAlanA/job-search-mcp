@@ -24,8 +24,21 @@ Reference:
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Optional
+
+# Make the `job_search_mcp` package importable no matter how this file is
+# launched (plain `python`, `python -m`, `mcp run`/`mcp dev`, the MCP
+# Inspector's own re-spawn, or Claude Desktop's stdio launcher) -- several
+# of these load this file directly and do not reliably pass through a
+# PYTHONPATH set in the calling shell, so we locate our own package
+# directory (two levels up: src/job_search_mcp/server.py -> src/) relative
+# to this file on disk instead of depending on the caller's environment.
+_SRC_DIR = str(Path(__file__).resolve().parent.parent)
+if _SRC_DIR not in sys.path:
+    sys.path.insert(0, _SRC_DIR)
 
 from mcp.server.fastmcp import FastMCP
 
