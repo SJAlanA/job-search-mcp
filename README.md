@@ -7,7 +7,7 @@ Ask Claude to "check my inbox for job updates," and it searches Gmail
 local SQLite tracker -- creating a calendar event automatically when it
 spots an interview time.
 
-Built for Cornell ENMGT (MCP Assignment). Domain: **Personal Productivity**
+Built for Cornell ENMGT 5405 (Assignment 4) by Sahai Jordi Alan Anbu Kulandainathan (sa2525). Domain: **Personal Productivity**
 (task tracking + email summarization).
 
 > **AI disclaimer:** The idea for this project was conceived by the author (SJAlanA). The implementation was coded with the assistance of Claude Sonnet.
